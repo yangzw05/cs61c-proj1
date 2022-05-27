@@ -9,7 +9,6 @@
 #include <sys/stat.h>
 
 #include "beargit.h"
-#include "cunittests.h"
 
 int check_initialized(void) {
   struct stat s;
