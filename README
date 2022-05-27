@@ -1,0 +1,22 @@
+# beargit
+This is Project 0 from UC Berkley CS61C. 
+
+Beargit is a simpler version of git, which can track individual files in the current working directory (no subdirectories!). It maintains a .beargit/ subdirectory containing information about your repository. For each commit that the user makes, a directory is created inside the .beargit/ directory (.beargit/<ID>, where <ID> is the ID of the commit). The .beargit/ directory additionally contains two files: .index (a list of all currently tracked files, one per line, no duplicates) and .prev (contains the ID of the last commit, or 0..0 if there is no commit yet). Each .beargit/<ID> directory contains a copy of each tracked file (as well as the .index file) at the time of the commit, a .msg file that contains the commit message (one line) and a .prev file that contains the commit ID of the previous commit. You can 
+
+Beargit Commend
+
+  beargit init
+
+  beargit status - The status command in beargit should read the file .beargit/.index and print a line for each tracked file. The exact format is described below. Unlike git status, beargit status should not print anything about untracked files.
+
+  beargit rm - The rm command in beargit takes in a single argument, which specifies the file to remove from the index (which is stored in the file .beargit/.index). If the filename passed in is not currently being tracked, you should print an error as indicated below. Note that this behavior is different from git in that it doesn't delete the file from your file system.
+3. beargit commit - First, check whether the commit string contains "GO BEARS!". If not, display an error message.
+Read the ID of the previous last commit from .beargit/.prev
+Generate the next ID (newid) in such a way that:
+All characters of the id are either 6, 1 or c
+Generating 100 IDs in a row will generate 100 IDs that are all unique (Hint: you can do this in such a way that you go through all possible IDs before you repeat yourself. Some of the ideas from the number representation class may help you!)
+Generate a new directory .beargit/<newid> and copy .beargit/.index, .beargit/.prev and all tracked files into the directory.
+Store the commit message (<msg>) into .beargit/<newid>/.msg
+Write the new ID into .beargit/.prev.
+4. beargit log
+5. 
