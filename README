@@ -1,26 +1,6 @@
-# beargit
-This is projects I worked on in UC Berkley CS61C. 
+This repository contains the first project (Beargit) of the CS61c Course at UC Berkeley. I self-learned this course online.
+Course Website: http://www-inst.eecs.berkeley.edu/~cs61c/su15/
 
-Beargit is a simpler version of git, which can track individual files in the current working directory (no subdirectories!). It maintains a .beargit/ subdirectory containing information about your repository. For each commit that the user makes, a directory is created inside the .beargit/ directory (.beargit/<ID>, where <ID> is the ID of the commit). The .beargit/ directory additionally contains two files: .index (a list of all currently tracked files, one per line, no duplicates) and .prev (contains the ID of the last commit, or 0..0 if there is no commit yet). Each .beargit/<ID> directory contains a copy of each tracked file (as well as the .index file) at the time of the commit, a .msg file that contains the commit message (one line) and a .prev file that contains the commit ID of the previous commit. You can also use checkout to retrieve the repository and go back to the state of a previous commit. It also supports branches!
-
-Beargit Commend
-
-beargit init - create a new repository.
-
-beargit add - start tracking a file.
-
-beargit status - read the file .beargit/.index and print a line for each tracked file.
-
-beargit rm - takes in a single argument, which specifies the file to remove from the index (which is stored in the file .beargit/.index).
-
-beargit commit - 1) read the ID of the previous last commit from .beargit/.prev; 2) generate the next ID (newid) in such a way that: All characters of the id are either 6, 1 or c; 3) generate a new directory .beargit/<newid> and copy .beargit/.index, .beargit/.prev and all tracked files into the directory; 4) store the commit message (<msg>) into .beargit/<newid>/.msg; 5) write the new ID into .beargit/.prev.
-
-beargit log - print out all recent commits
-
-beargit branch - prints all the branches and puts a star in front of the current one.
-
-beargit checkout <commit_id>: Check out a particular commit (i.e., leaving a branch HEAD if you are on it; this is called a "detached" state.
-
-beargit checkout <branch>: Check out an existing branch and check out its head.
-
-beargit checkout -b <newbranch>: Start a new branch at the current commit.
+Beargit - A simple implementation of git, with the only supported commands being init, add, rm, comit, branch, 
+checkout, status, and log (written in C, with starting code being provided to us)
+http://www-inst.eecs.berkeley.edu/~cs61c/su15/projs/01/
