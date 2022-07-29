@@ -1,6 +1,12 @@
 This repository contains the first project (Beargit) of the CS61c Course at UC Berkeley. I self-learned this course online.
 Course Website: http://www-inst.eecs.berkeley.edu/~cs61c/su15/
 
-Beargit - A simple implementation of git, with the only supported commands being init, add, rm, comit, branch, 
-checkout, status, and log (written in C, with starting code being provided to us)
-http://www-inst.eecs.berkeley.edu/~cs61c/su15/projs/01/
+Beargit - Implementing a simplified version of Git (written in C, with provided starting code), supported commands include: 
+- beatgit init
+- beargit add
+- beargit rm
+- beargit comit
+- beargit branch
+- beargit checkout
+- beargit status
+- beargit log 
