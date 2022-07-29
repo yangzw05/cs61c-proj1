@@ -1,4 +1,4 @@
-This repository contains the first project (Beargit) of the CS61c Course at UC Berkeley. I self-learned this course online.
+This repository contains the first course project I completed when I self learned UC Berkeley CS61C online.
 Course Website: http://www-inst.eecs.berkeley.edu/~cs61c/su15/
 
 Beargit - Implementing a simplified version of Git (written in C, with provided starting code), supported commands include: 
